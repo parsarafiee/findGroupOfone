@@ -1,5 +1,4 @@
 countgroup=1
-countgroup_of_one=0
 countgroup_of_one_array=[]
 def check_to_search(p_i,p_j,matrix):
     allow=True
@@ -45,15 +44,12 @@ myarray=[[0,0,1,0,1],
          [0,0,0,0,0],
          [1,1,0,1,0]]
 
-# for i in range(0,len(myarray)) :
-#     for j in range(0,len(myarray[i])):
 for i in range (0, len(myarray)):
     for j in range (0, len(myarray[i])):
         a= looking_for1(i,j,myarray,countgroup)
         if a >=2 :
-            countgroup_of_one +=1
+
             countgroup_of_one_array.append(a)
 
-print("number of group of 1 is  : "+format(countgroup_of_one) )
+print("number of group of 1 is  : "+format(len(countgroup_of_one_array)) )
 print((countgroup_of_one_array))
-# print(looking_for1(0,0,myarray,countgroup))
